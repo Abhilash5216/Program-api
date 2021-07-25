@@ -38,6 +38,13 @@ namespace program_api.Controllers
             _Context.SaveChanges();
             return Ok("New Employee Created");
         }
+        [HttpGet]
+        [Route("Dummy")]
+        public ActionResult Dummy1()
+        {
+            var result = _Context.Employees.ToList();
+            return Ok(result);
+        }
 
     }
 }
